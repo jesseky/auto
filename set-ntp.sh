@@ -14,9 +14,9 @@ echo 'FallbackNTP=ntp.ubuntu.com 0.arch.pool.ntp.org' >> /etc/systemd/timesyncd.
 echo "[4] set-ntp..."
 timedatectl set-ntp true 
 timedatectl status
-mv /etc/localtime /etc/localtime.backup
-ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+cp /etc/localtime /etc/localtime.backup
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-echo "\n"
+echo
 date
 echo "[5] time set done"
